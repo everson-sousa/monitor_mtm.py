@@ -259,8 +259,8 @@ def main(page: ft.Page):
             for url in URLS_PARA_VERIFICAR:
                 if not monitoramento_ativo.is_set(): break
                 try:
-                    response = requests.get(url, timeout=15)
-                    if response.status_code >= 400:
+                    response = requests.get(url, timeout=300)
+                    if response.status_code >= 400:                        
                         erro = f"URL '{url}' respondeu com erro: {response.status_code}"
                         log_and_display(erro, "WARNING", ft.Colors.ORANGE)
                         enviar_alerta_sms(erro)
