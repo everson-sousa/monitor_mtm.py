@@ -1,0 +1,10 @@
+# Pasta de logs
+logs/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos de ambiente e IDE
+.env
+.vscode/
